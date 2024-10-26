@@ -15,6 +15,12 @@
     
     <!-- Link para o arquivo de estilo CSS que contém as regras de estilo da página -->
     <link rel="stylesheet" href="scr/css/estilos.css">
+    <style>
+        /* Adicionando estilo para o texto */
+        .content {
+            text-align: left; /* Alinhamento do texto à esquerda */
+        }
+    </style>
 </head>
 <body>
     <!-- Navbar -->
@@ -42,13 +48,13 @@
             <h1>Code Connect</h1>
             <!-- Parágrafo descritivo, que pode ser modificado para se adequar ao conteúdo da loja -->
             <p>
-                A história da nossa comunidade começa no início da pandemia, quando percebemos a necessidade de oferecer uma solução acessível para quem desejava criar seus próprios servidores de MTA e SAMP. Com a intenção de ajudar iniciantes que enfrentavam dificuldades financeiras, decidimos lançar um serviço de hospedagem competitivo e de baixo custo. E não é que deu certo? Chegamos a ter mais de 2.000 servidores online, conquistando a confiança e o carinho de muitos criadores de servidores.
+                A história da nossa comunidade começou no início da pandemia, quando decidimos oferecer uma solução acessível para criar servidores de MTA e SAMP, ajudando iniciantes em dificuldades financeiras. O projeto teve grande sucesso, chegando a mais de 2.000 servidores online.
             </p>
             <p>
-                Com o tempo, precisei focar na minha carreira e currículo, e o projeto ficou em segundo plano. Mas a paixão pela tecnologia e pelo desenvolvimento nunca desapareceu. Agora, aos 28 anos, estou de volta com um novo projeto, mantendo a mesma essência: ajudar e impulsionar talentos. Desta vez, estamos explorando nichos mais competitivos, como o desenvolvimento de bots para Discord, criação de sites e a venda de VPS e servidores dedicados. 
+                Após um tempo focando na minha carreira, a paixão pela tecnologia nunca desapareceu. Agora, aos 28 anos, estou de volta com um novo projeto que mantém a essência de ajudar e impulsionar talentos, explorando nichos como desenvolvimento de bots para Discord, criação de sites e venda de VPS e servidores dedicados.
             </p>
             <p>
-                Junte-se a nós nesta jornada! Vamos crescer juntos e transformar suas ideias em realidade. Seu sucesso é a nossa missão!
+                Junte-se a nós nesta jornada! Vamos transformar suas ideias em realidade.
             </p>
             <!-- Botão de ação que pode levar a outra página ou funcionalidade -->
             <button class="action-btn">Saiba Mais</button>
@@ -72,5 +78,26 @@
             <a href="#">GitHub</a>
         </p>
     </footer>
+    
+    <script>
+        let lastScrollTop = 0; // Posição de rolagem anterior
+        const navbar = document.querySelector('.navbar'); // Seleciona a navbar
+    
+        window.addEventListener('scroll', function() {
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    
+            if (scrollTop > lastScrollTop) {
+                // Rolando para baixo
+                navbar.style.top = '-80px'; // Ajuste a altura para o tamanho da sua navbar
+            } else {
+                // Rolando para cima
+                navbar.style.top = '0';
+            }
+    
+            lastScrollTop = scrollTop; // Atualiza a posição anterior de rolagem
+        });
+    </script>
+    
+
 </body>
 </html>
