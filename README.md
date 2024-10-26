@@ -30,6 +30,7 @@ Durante a pandemia, nossa comunidade começou a oferecer hospedagem de servidore
 - **HTML5:** Estruturação da página web.
 - **CSS3:** Estilização e design responsivo.
 - **Fontes Personalizadas:** Para um toque único e distintivo no design.
+- **JavaScript:** Para lidar com a rolagem da pagina (o navbar some ao detectar que apgina foi rolada para baixo)
 
 # Como Contribuir
 Se você deseja contribuir para este projeto, sinta-se à vontade para abrir um issue ou enviar um pull request. Qualquer ajuda será bem-vinda!
