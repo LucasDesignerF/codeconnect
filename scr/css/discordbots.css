@@ -1,0 +1,206 @@
+/* Importação das fontes personalizadas */
+@font-face {
+    font-family: 'LojaFont'; /* Nome da fonte para o nome da loja */
+    src: url('../../fonts/logo.ttf') format('truetype'); /* Localização do arquivo da fonte */
+}
+
+@font-face {
+    font-family: 'NavFont'; /* Nome da fonte para os itens do navbar */
+    src: url('../../fonts/nav.ttf') format('truetype'); /* Localização do arquivo da fonte */
+}
+
+@font-face {
+    font-family: 'TextFont'; /* Nome da fonte para os textos */
+    src: url('../../fonts/text.ttf') format('truetype'); /* Localização do arquivo da fonte */
+}
+
+/* Estilos gerais do corpo da página */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #494949; /* Cinza escuro do Discord */
+    color: #ffffff;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Navbar refinado e transparente */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 2%;
+    background: rgba(0, 0, 0, 0.2);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.navbar .store-name {
+    font-family: 'TextFont', sans-serif;
+    font-size: 2rem;
+    color: #ffffff;
+    margin-right: 60px;
+}
+
+/* Itens do navbar */
+.navbar .nav-items {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.navbar .nav-items a {
+    font-family: 'TextFont', sans-serif;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+.navbar .nav-items a:hover {
+    color: #3dc03d;
+}
+
+/* Botão de Sign In */
+.navbar .sign-in-btn {
+    font-family: 'TextFont', sans-serif;
+    background-color: #3dc03d;
+    color: #ffffff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.navbar .sign-in-btn:hover {
+    background-color: #017101;
+}
+
+/* Seção de bots */
+.bots-section {
+    padding: 80px 2% 60px;
+}
+
+.bots-section h1 {
+    text-align: center;
+    font-family: 'TextFont', sans-serif;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+/* Centralizar o contêiner de descrição */
+.center-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center; /* Centraliza o texto */
+    margin-bottom: 30px; /* Espaçamento opcional */
+}
+
+/* Texto personalizado */
+.custom-text {
+    font-family: 'TextFont', sans-serif;
+    font-size: 1rem;
+    color: #ffffff;
+    margin: 5px 0; /* Adiciona um espaçamento entre as linhas */
+}
+
+.bots-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 35px;
+}
+
+.bots-box {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    width: 250px;
+    transition: transform 0.3s;
+}
+
+.bots-box:hover {
+    transform: scale(1.05);
+}
+
+.bots-box img {
+    width: 50%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.bots-box .description,
+.bots-box .price {
+    font-family: 'TextFont', sans-serif;
+}
+
+.bots-box .buy-btn {
+    font-family: 'TextFont', sans-serif;
+    background-color: #3dc03d;
+    color: #ffffff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.bots-box .buy-btn:hover {
+    background-color: #017101;
+}
+
+/* Estilo para os ícones dos itens */
+.bots-box ul {
+    padding: 0;
+    list-style-type: none; /* Remove marcadores */
+}
+
+.bots-box ul li {
+    display: flex;
+    align-items: center; /* Alinha verticalmente os ícones e o texto */
+    font-family: 'TextFont', sans-serif; /* Fonte dos itens */
+    font-size: 0.9rem; /* Ajusta o tamanho da fonte */
+}
+
+.bots-box ul li img {
+    width: 20px; /* Ajusta a largura do ícone */
+    height: 20px; /* Ajusta a altura do ícone */
+    margin-right: 5px; /* Espaço entre o ícone e o texto */
+}
+
+/* Rodapé */
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.2);
+    font-size: 1rem;
+    margin: 0;
+    border: none;
+    width: 100%;
+    position: relative;
+    box-sizing: border-box;
+}
+
+footer p {
+    margin: 5px;
+}
+
+footer a {
+    color: #3dc03d;
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+footer a:hover {
+    color: #017101;
+}

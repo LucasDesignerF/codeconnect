@@ -1,0 +1,216 @@
+/* Importação das fontes personalizadas */
+@font-face {
+    font-family: 'LojaFont'; /* Nome da fonte para o nome da loja */
+    src: url('../../fonts/logo.ttf') format('truetype'); /* Localização do arquivo da fonte */
+}
+
+@font-face {
+    font-family: 'NavFont'; /* Nome da fonte para os itens do navbar */
+    src: url('../../fonts/nav.ttf') format('truetype'); /* Localização do arquivo da fonte */
+}
+
+@font-face {
+    font-family: 'TextFont'; /* Nome da fonte para os textos */
+    src: url('../../fonts/text.ttf') format('truetype'); /* Localização do arquivo da fonte */
+}
+
+/* Estilos gerais do corpo da página */
+body {
+    margin: 0; /* Remove a margem padrão do body */
+    font-family: Arial, sans-serif; /* Define a fonte padrão do corpo */
+    background-color: #494949; /* Define a cor de fundo (cinza escuro) */
+    color: #ffffff; /* Define a cor do texto como branco */
+    padding: 0; /* Remove o padding padrão do body */
+    box-sizing: border-box; /* Faz com que padding e border sejam incluídos nas dimensões totais do elemento */
+}
+
+/* Navbar refinado e transparente */
+.navbar {
+    display: flex; /* Usa o Flexbox para o layout */
+    justify-content: space-between; /* Espaça os itens com espaço igual entre eles */
+    align-items: center; /* Alinha os itens verticalmente ao centro */
+    padding: 15px 2%; /* Padding superior/inferior de 15px e lateral de 2% */
+    background: rgba(0, 0, 0, 0.2); /* Fundo semi-transparente (preto) */
+    position: fixed; /* Fixa a navbar no topo da página */
+    top: 0; /* Posiciona a navbar no topo */
+    left: 0; /* Posiciona a navbar na esquerda */
+    right: 0; /* Posiciona a navbar na direita */
+    z-index: 1000; /* Garante que a navbar esteja acima de outros elementos */
+}
+
+.navbar .store-name {
+    font-family: 'TextFont', sans-serif; /* Define a fonte do nome da loja */
+    font-size: 2rem; /* Define o tamanho da fonte como 2rem */
+    color: #ffffff; /* Define a cor do texto como branco */
+    margin-right: 60px; /* Adiciona margem à direita para espaçamento */
+}
+
+/* Itens do navbar */
+.navbar .nav-items {
+    display: flex; /* Usa o Flexbox para o layout dos itens */
+    gap: 15px; /* Espaçamento de 15px entre os itens */
+    align-items: center; /* Alinha os itens verticalmente ao centro */
+}
+
+.navbar .nav-items a {
+    font-family: 'TextFont', sans-serif; /* Define a fonte dos links */
+    color: #ffffff; /* Define a cor do texto como branco */
+    text-decoration: none; /* Remove o sublinhado dos links */
+    font-size: 1rem; /* Define o tamanho da fonte como 1rem */
+    transition: color 0.3s; /* Adiciona uma transição suave para a cor */
+}
+
+.navbar .nav-items a:hover {
+    color: #3dc03d; /* Muda a cor ao passar o mouse */
+}
+
+/* Botão de Sign In */
+.navbar .sign-in-btn {
+    font-family: 'TextFont', sans-serif; /* Define a fonte do botão */
+    background-color: #3dc03d; /* Cor de fundo do botão (verde) */
+    color: #ffffff; /* Cor do texto do botão (branco) */
+    border: none; /* Remove a borda padrão do botão */
+    padding: 0.5rem 1rem; /* Padding vertical de 0.5rem e horizontal de 1rem */
+    border-radius: 5px; /* Arredonda os cantos do botão */
+    font-size: 1rem; /* Define o tamanho da fonte do botão como 1rem */
+    cursor: pointer; /* Muda o cursor ao passar sobre o botão */
+    transition: background-color 0.3s; /* Adiciona uma transição suave para a cor de fundo */
+}
+
+.navbar .sign-in-btn:hover {
+    background-color: #017101; /* Muda a cor de fundo ao passar o mouse */
+}
+
+/* Seção de bots */
+.bots-section {
+    padding: 80px 5% 60px; /* Define o espaçamento superior/inferior e lateral */
+}
+
+.bots-section h1 {
+    text-align: center; /* Centraliza o texto do título */
+    font-family: 'TextFont', sans-serif; /* Define a fonte do título */
+    font-size: 2rem; /* Define o tamanho da fonte do título como 2rem */
+    margin-bottom: 20px; /* Adiciona margem inferior para espaçamento */
+}
+
+/* Centralizar o contêiner de descrição */
+.center-text {
+    display: flex; /* Usa o Flexbox para o layout */
+    flex-direction: column; /* Organiza os itens em coluna */
+    align-items: center; /* Alinha os itens ao centro */
+    text-align: center; /* Centraliza o texto */
+    margin-bottom: 30px; /* Adiciona margem inferior opcional */
+}
+
+/* Texto personalizado */
+.custom-text {
+    font-family: 'TextFont', sans-serif; /* Define a fonte do texto personalizado */
+    font-size: 1rem; /* Define o tamanho da fonte como 1rem */
+    color: #ffffff; /* Define a cor do texto como branco */
+    margin: 5px 0; /* Adiciona margem superior/inferior entre as linhas */
+}
+
+/* Lista de produtos */
+.bots-list {
+    list-style: none; /* Remove a marcação da lista */
+    padding: 0; /* Remove o padding padrão */
+    margin: 0 auto; /* Centraliza a lista horizontalmente */
+    max-width:110%; /* Define a largura máxima como 100% */
+}
+
+/* Item de produto com botão à direita */
+.bots-list li {
+    display: flex; /* Usa o Flexbox para o layout dos itens */
+    justify-content: space-between; /* Espaça os itens com espaço igual entre eles */
+    align-items: center; /* Alinha os itens verticalmente ao centro */
+    padding: 20px; /* Padding superior/inferior de 10px e lateral de 10px */
+    margin-bottom: 15px; /* Espaçamento de 10px entre os itens */
+    border-radius: 15px; /* Arredonda os cantos da caixa do item */
+    background-color: rgba(255, 255, 255, 0.1); /* Fundo semi-transparente para cada item */
+}
+
+/* Imagem do produto */
+.bots-list li img {
+    max-width: 120px; /* Define a largura máxima da imagem */
+    height: auto; /* Mantém a proporção da imagem */
+    margin-right: 0px; /* Adicionado para um espaço entre a imagem e o texto */
+    margin-left: 100px;
+}
+
+/* Informações do produto */
+.bots-info h2 {
+    font-size: 1.2rem; /* Define o tamanho da fonte como 1.2rem */
+    font-family: 'TextFont', sans-serif; /* Define a fonte das informações do produto */
+    color: #ffffff; /* Define a cor do texto como branco */
+    margin: 0 0 5px; /* Margem superior/inferior: 0 e margem inferior: 5px */
+    margin-right: 20px;
+}
+
+.bots-info .specs {
+    font-size: 0.9rem; /* Define o tamanho da fonte das especificações como 0.9rem */
+    color: #bfbfbf; /* Define a cor do texto como cinza claro */
+    margin: 0 0 10px; /* Margem superior/inferior: 0 e margem inferior: 10px */
+    display: flex; /* Usa o Flexbox para o layout das especificações */
+    flex-wrap: wrap; /* Permite que as especificações se quebrem para a próxima linha */
+    gap: 10px; /* Espaçamento entre as especificações */
+}
+
+.bots-info .specs span {
+    background-color: rgba(255, 255, 255, 0.1); /* Fundo semi-transparente para as especificações */
+    padding: 5px 10px; /* Padding superior/inferior: 5px e lateral: 10px */
+    border-radius: 5px; /* Arredonda os cantos do elemento */
+}
+
+.bots-info .price {
+    font-size: 1.2rem; /* Define o tamanho da fonte do preço como 1.2rem */
+    font-weight: bold; /* Define o peso da fonte como bold (negrito) */
+    color: #3dc03d; /* Define a cor do preço como verde */
+    margin: 10px 0; /* Margem superior/inferior: 10px */
+    margin-left: 775px;
+}
+
+/* Botão de compra alinhado à direita */
+.buy-btn {
+    font-family: 'TextFont', sans-serif; /* Define a fonte do botão de compra */
+    background-color: #3dc03d; /* Cor de fundo do botão (verde) */
+    color: #ffffff; /* Cor do texto do botão (branco) */
+    border: none; /* Remove a borda padrão do botão */
+    padding: 0.5rem 1rem; /* Padding vertical de 0.5rem e horizontal de 1rem */
+    border-radius: 5px; /* Arredonda os cantos do botão */
+    cursor: pointer; /* Muda o cursor ao passar sobre o botão */
+    transition: background-color 0.3s; /* Adiciona uma transição suave para a cor de fundo */
+    align-self: flex-end; /* Alinha o botão ao final do container */
+    margin-left: 805px;
+}
+
+.buy-btn:hover {
+    background-color: #017101; /* Muda a cor de fundo ao passar o mouse */
+}
+
+/* Rodapé */
+footer {
+    display: flex; /* Usa o Flexbox para o layout do rodapé */
+    flex-direction: column; /* Organiza os itens em coluna */
+    align-items: center; /* Alinha os itens ao centro */
+    justify-content: center; /* Alinha os itens verticalmente ao centro */
+    padding: 10px 2%; /* Padding superior/inferior de 10px e lateral de 2% */
+    background: rgba(0, 0, 0, 0.2); /* Fundo semi-transparente (preto) */
+    font-size: 1rem; /* Define o tamanho da fonte do rodapé como 1rem */
+    margin: 0; /* Remove a margem padrão do rodapé */
+    width: 100%; /* Define a largura do rodapé como 100% */
+    box-sizing: border-box; /* Inclui padding e border nas dimensões totais do elemento */
+}
+
+footer p {
+    margin: 5px; /* Margem de 5px em todos os lados para espaçamento */
+}
+
+footer a {
+    color: #3dc03d; /* Define a cor dos links como verde */
+    text-decoration: none; /* Remove o sublinhado dos links */
+    margin: 0 5px; /* Margem horizontal de 5px para espaçamento entre os links */
+}
+
+footer a:hover {
+    color: #017101; /* Muda a cor ao passar o mouse */
+}
