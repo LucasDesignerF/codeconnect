@@ -1,0 +1,193 @@
+/* Importação das fontes personalizadas */
+@font-face {
+    font-family: 'LojaFont'; /* Nome da fonte para o nome da loja */
+    src: url('../../fonts/logo.ttf') format('truetype'); /* Localização do arquivo da fonte */
+}
+
+@font-face {
+    font-family: 'NavFont'; /* Nome da fonte para os itens do navbar */
+    src: url('../../fonts/nav.ttf') format('truetype'); /* Localização do arquivo da fonte */
+}
+
+/* Estilos gerais do corpo da página */
+body {
+    margin: 0; /* Remove a margem padrão do corpo */
+    font-family: Arial, sans-serif; /* Define a fonte padrão */
+    background-color: #2b2d31; /* Cinza escuro do Discord */
+    color: #ffffff; /* Cor do texto */
+    padding: 0 10px; /* Margem de segurança nas laterais */
+    box-sizing: border-box; /* Inclui padding e bordas na largura e altura total dos elementos */
+}
+
+/* Navbar refinado e transparente */
+.navbar {
+    display: flex; /* Utiliza flexbox para layout */
+    justify-content: space-between; /* Espaça os itens de forma igual */
+    align-items: center; /* Alinha os itens verticalmente ao centro */
+    padding: 15px 20px; /* Padding interno da navbar */
+    background: rgba(0, 0, 0, 0.4); /* Fundo da navbar com transparência */
+    position: fixed; /* Fixa a navbar no topo da página */
+    top: 0; /* Alinha a navbar ao topo da página */
+    left: 0; /* Alinha a navbar ao lado esquerdo da página */
+    right: 0; /* Alinha a navbar ao lado direito da página */
+    z-index: 1000; /* Garante que a navbar fique acima de outros elementos */
+}
+
+/* Nome da loja com fonte personalizada */
+.navbar .store-name {
+    font-family: 'LojaFont', sans-serif; /* Fonte personalizada para o nome da loja */
+    font-size: 24px; /* Tamanho da fonte */
+    color: #ffffff; /* Cor do texto */
+    margin-right: 40px; /* Adiciona margem à direita para alinhar com o botão "Sign In" */
+}
+
+/* Estilo dos itens do navbar */
+.navbar .nav-items {
+    display: flex; /* Utiliza flexbox para os itens do navbar */
+    gap: 15px; /* Espaçamento entre os itens */
+    align-items: center; /* Alinha os itens verticalmente ao centro */
+}
+
+.navbar .nav-items a {
+    font-family: 'NavFont', sans-serif; /* Fonte personalizada para os links */
+    color: #ffffff; /* Cor do texto dos links */
+    text-decoration: none; /* Remove o sublinhado dos links */
+    font-size: 16px; /* Tamanho da fonte dos links */
+    transition: color 0.3s; /* Transição suave para a mudança de cor ao passar o mouse */
+}
+
+/* Efeito hover para os links do navbar */
+.navbar .nav-items a:hover {
+    color: #7289da; /* Muda a cor ao passar o mouse */
+}
+
+/* Botão de Sign In no navbar */
+.navbar .sign-in-btn {
+    font-family: 'NavFont', sans-serif; /* Fonte personalizada para o botão */
+    background-color: #7289da; /* Cor de fundo do botão */
+    color: #ffffff; /* Cor do texto do botão */
+    border: none; /* Remove a borda padrão do botão */
+    padding: 8px 15px; /* Padding interno do botão */
+    border-radius: 5px; /* Bordas arredondadas do botão */
+    font-size: 14px; /* Tamanho da fonte do botão */
+    cursor: pointer; /* Muda o cursor ao passar sobre o botão */
+    transition: background-color 0.3s; /* Transição suave para a mudança de cor ao passar o mouse */
+}
+
+/* Efeito hover para o botão de Sign In */
+.navbar .sign-in-btn:hover {
+    background-color: #5a6db7; /* Muda a cor de fundo ao passar o mouse */
+}
+
+/* Seção principal dividida em duas colunas */
+.main-section {
+    display: flex; /* Utiliza flexbox para layout */
+    flex-direction: row; /* Direção horizontal para os filhos (colunas) */
+    align-items: center; /* Alinha os itens verticalmente ao centro */
+    justify-content: center; /* Centraliza os itens horizontalmente */
+    padding-top: 100px; /* Espaço acima da seção principal */
+    padding-bottom: 40px; /* Espaço abaixo da seção principal */
+    gap: 0px; /* Espaçamento entre colunas */
+    margin: 0 80px; /* Margem lateral para centralizar o conteúdo */
+}
+
+/* Conteúdo da seção principal (lado esquerdo) */
+.main-section .content {
+    flex: 1; /* Permite que o conteúdo ocupe espaço flexível */
+    text-align: center; /* Centraliza o texto dentro do conteúdo */
+    padding: 65px; /* Padding interno do conteúdo */
+}
+
+/* Título do conteúdo principal */
+.main-section .content h1 {
+    font-family: 'LojaFont', sans-serif; /* Fonte personalizada para o título */
+    font-size: 32px; /* Tamanho da fonte do título */
+    margin: 0 0 15px; /* Margens do título (superior, direita e esquerda) */
+}
+
+/* Parágrafo do conteúdo principal */
+.main-section .content p {
+    font-size: 16px; /* Tamanho da fonte do parágrafo */
+    line-height: 1.6; /* Altura da linha para melhor legibilidade */
+    margin-bottom: 15px; /* Margem inferior do parágrafo */
+}
+
+/* Botão de ação na seção principal */
+.main-section .content .action-btn {
+    font-family: 'NavFont', sans-serif; /* Fonte personalizada para o botão */
+    background-color: #7289da; /* Cor de fundo do botão */
+    color: #ffffff; /* Cor do texto do botão */
+    padding: 10px 20px; /* Padding interno do botão */
+    border: none; /* Remove a borda padrão do botão */
+    border-radius: 5px; /* Bordas arredondadas do botão */
+    cursor: pointer; /* Muda o cursor ao passar sobre o botão */
+    transition: background-color 0.3s; /* Transição suave para a mudança de cor ao passar o mouse */
+}
+
+/* Efeito hover para o botão de ação */
+.main-section .content .action-btn:hover {
+    background-color: #5a6db7; /* Muda a cor de fundo ao passar o mouse */
+}
+
+/* Imagem do lado direito */
+.main-section .image {
+    flex: 1; /* Permite que a imagem ocupe espaço flexível */
+    text-align: center; /* Centraliza a imagem */
+}
+
+/* Estilo da imagem na seção principal */
+.main-section .image img {
+    width: 100%; /* Largura total da imagem */
+    max-width: 400px; /* Largura máxima da imagem */
+    height: auto; /* Mantém a proporção da imagem */
+}
+
+/* Rodapé simples */
+footer {
+    text-align: center; /* Centraliza o texto no rodapé */
+    padding: 10px 10px; /* Padding interno do rodapé (20px superior e inferior, 20px lateral) */
+    background: rgba(0, 0, 0, 0.3); /* Fundo do rodapé com transparência */
+    font-size: 14px; /* Tamanho da fonte do rodapé */
+    margin: 10 10px; /* Margem lateral para igualar ao padding do navbar */
+}
+
+/* Parágrafos no rodapé */
+footer p {
+    margin: 5px; /* Margem dos parágrafos do rodapé */
+}
+
+/* Links no rodapé */
+footer a {
+    color: #7289da; /* Cor do texto dos links */
+    text-decoration: none; /* Remove o sublinhado dos links */
+    margin: 0 5px; /* Margem lateral dos links */
+}
+
+/* Efeito hover para os links no rodapé */
+footer a:hover {
+    color: #5a6db7; /* Muda a cor dos links ao passar o mouse */
+}
+
+/* Media queries para dispositivos móveis */
+@media (max-width: 768px) {
+    .navbar .nav-items {
+        flex-direction: column; /* Muda a direção dos itens do navbar para coluna */
+        gap: 10px; /* Espaçamento entre os itens na coluna */
+    }
+
+    .main-section {
+        flex-direction: column; /* Muda a direção da seção principal para coluna */
+    }
+    
+    .main-section .content h1 {
+        font-size: 24px; /* Tamanho da fonte do título em dispositivos móveis */
+    }
+
+    .main-section .content p {
+        font-size: 14px; /* Tamanho da fonte do parágrafo em dispositivos móveis */
+    }
+
+    .main-section .content .action-btn {
+        padding: 12px; /* Ajusta o padding do botão em dispositivos móveis */
+    }
+}
